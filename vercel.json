@@ -7,7 +7,7 @@
       "methods": ["GET", "POST", "OPTIONS"],
       "headers": {
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Headers": "Content-Type, Stripe-Signature",
         "Access-Control-Allow-Methods": "GET, POST, OPTIONS"
       }
     },
@@ -17,7 +17,7 @@
       "methods": ["POST", "OPTIONS"],
       "headers": {
         "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Headers": "Content-Type, Stripe-Signature",
         "Access-Control-Allow-Methods": "POST, OPTIONS"
       }
     }
