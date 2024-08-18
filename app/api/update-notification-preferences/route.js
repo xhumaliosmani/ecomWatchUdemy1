@@ -1,7 +1,7 @@
 import connect from "@/utils/config/dbConnection";
 import { getServerSession } from "next-auth";
 import { NextResponse } from "next/server";
-import { authOptions } from "../../[...nextauth]/route";
+import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import User from "@/utils/models/User";
 
 export async function POST(req) {
