@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .shadow-neon {
+    --tw-shadow-color: #1B1A55;
+    /* Neon green */
+    box-shadow: 0 0 .5rem var(--tw-shadow-color),
+      0 0 2rem var(--tw-shadow-color),
+      0 0 2rem var(--tw-shadow-color),
+      0 0 2rem var(--tw-shadow-color),
+      0 0 2rem var(--tw-shadow-color);
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background-color: #f5f5f5;
+    /* Assuming you want a pure black background */
+    background-image: radial-gradient(circle, #9f9f9f 0px, transparent 1px),
+      radial-gradient(circle, #707070 0.5px, transparent 0px);
+    background-size: 20px 20px;
+    /* This determines the spacing of the dots */
+    background-position: 10 10, 10px 10px;
+    /* This offsets every other row */
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+
+
+/* Hide scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.dots {
+
+  background-color: #ffffff;
+  /* Assuming you want a pure black background */
+  background-image: radial-gradient(circle, #59595957 0px, transparent 1px);
+  background-size: 10px 10px;
+  /* This determines the spacing of the dots */
+  background-position: 10 10, 10px 10px;
+  /* This offsets every other row */
+}
+
+.colorDark {
+  background-color: #000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
+
+
+/* Global CSS file */
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: inherit;
+}
+
+.product {
+  transition: background 0.5s ease-in-out;
+}
+
+
+.product:hover {
+  background: linear-gradient(to top right, rgba(255, 0, 0, 0), rgba(0, 217, 255, 0.224)) !important;
+}
+
+.fadeRight:hover {
+  background: linear-gradient(to right, rgba(0, 217, 255, 0.224), rgba(255, 0, 0, 0)) !important;
+}
